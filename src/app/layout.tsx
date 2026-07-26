@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     description:
       "Amaze Property Management Solutions Pvt Ltd provides global standards of Integrated Facility Management across India with a 15,000+ strong workforce.",
   },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
