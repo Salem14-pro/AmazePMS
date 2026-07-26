@@ -5,9 +5,9 @@ import Link from "next/link";
 import { UserPlus, LogIn, Menu, X } from "lucide-react";
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#clients", label: "Clients" },
+  { href: "/#about", label: "About" },
+  { href: "/#services", label: "Services" },
+  { href: "/#clients", label: "Clients" },
 ];
 
 export function SiteHeader() {
@@ -30,7 +30,7 @@ export function SiteHeader() {
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 sm:px-6 md:px-10 py-4 sm:py-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 text-[#2d3a2a]">
+        <Link href="/" className="flex items-center gap-2 text-[#1f2a1d]">
           <span className="text-lg sm:text-xl md:text-2xl font-semibold tracking-tight">
             AmazePMS<sup className="text-[10px] sm:text-xs font-medium">®</sup>
           </span>
@@ -45,31 +45,23 @@ export function SiteHeader() {
               className={`text-sm px-3 py-2 transition-colors ${
                 i === 0
                   ? "font-semibold text-[#1f2a1d]"
-                  : "font-medium text-[#4b5b47] hover:text-[#1f2a1d]"
+                  : "font-medium text-[#1f2a1d] hover:text-[#1f2a1d]"
               }`}
             >
               {link.label}
             </a>
           ))}
           <a
-            href="#contact"
+            href="/#contact"
             className="ml-2 bg-[#1f2a1d] hover:bg-[#2a3827] text-white text-sm font-medium px-5 py-2.5 rounded-full transition-colors inline-block"
           >
             Get a Quote
           </a>
         </div>
 
-        {/* Right side */}
-        <div className="flex items-center gap-3 sm:gap-6 text-[#2d3a2a]">
+        <div className="flex items-center gap-3 sm:gap-6 text-[#1f2a1d]">
           <a
-            href="#careers"
-            className="hidden sm:flex items-center gap-2 text-sm font-medium hover:opacity-80 transition-opacity"
-          >
-            <UserPlus className="w-4 h-4" />
-            Careers
-          </a>
-          <a
-            href="#contact"
+            href="/#footer"
             className="hidden sm:flex items-center gap-2 text-sm font-medium hover:opacity-80 transition-opacity"
           >
             <LogIn className="w-4 h-4" />
@@ -128,7 +120,7 @@ export function SiteHeader() {
             }`}
             style={{ transitionDelay: menuOpen ? "100ms" : "0ms" }}
           >
-            <Link href="/" onClick={() => setMenuOpen(false)} className="flex items-center gap-2 text-[#2d3a2a]">
+            <Link href="/" onClick={() => setMenuOpen(false)} className="flex items-center gap-2 text-[#1f2a1d]">
               <span className="text-2xl font-semibold tracking-tight">
                 AmazePMS<sup className="text-xs font-medium">®</sup>
               </span>
@@ -163,21 +155,15 @@ export function SiteHeader() {
             style={{ transitionDelay: menuOpen ? "400ms" : "0ms" }}
           >
             <a
-              href="#careers"
-              className="flex items-center gap-2 text-sm font-medium text-[#2d3a2a] sm:hidden"
-            >
-              <UserPlus className="w-4 h-4" />
-              Careers
-            </a>
-            <a
-              href="#contact"
-              className="flex items-center gap-2 text-sm font-medium text-[#2d3a2a] sm:hidden"
+              href="/#footer"
+              onClick={() => setMenuOpen(false)}
+              className="flex items-center gap-2 text-sm font-medium text-[#1f2a1d] sm:hidden"
             >
               <LogIn className="w-4 h-4" />
               Contact
             </a>
             <a
-              href="#contact"
+              href="/#contact"
               className="mt-2 bg-[#1f2a1d] hover:bg-[#2a3827] text-white text-sm font-semibold px-5 py-3 rounded-full transition-colors text-center"
             >
               Get a Quote

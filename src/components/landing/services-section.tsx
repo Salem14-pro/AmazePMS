@@ -75,7 +75,7 @@ export function ServicesSection() {
               End-to-end facility <br />
               services, <span className="text-[#336443] italic">in-house.</span>
             </h2>
-            <p className="text-[#4b5b47] text-lg">
+            <p className="text-[#1f2a1d] text-lg">
               We deliver every core service through our own trained teams. No fragmentation, no contractor delays.
             </p>
           </motion.div>
@@ -111,7 +111,7 @@ export function ServicesSection() {
                 <h3 className="text-xl font-medium text-[#1f2a1d] mb-3 group-hover:text-[#336443] transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-[#4b5b47] text-sm leading-relaxed">
+                <p className="text-[#1f2a1d] text-sm leading-relaxed">
                   {service.description}
                 </p>
               </div>

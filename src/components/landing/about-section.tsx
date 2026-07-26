@@ -47,7 +47,7 @@ export function AboutSection() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-[#4b5b47] text-lg leading-relaxed mb-10 max-w-xl"
+              className="text-[#1f2a1d] text-lg leading-relaxed mb-10 max-w-xl"
             >
               Amaze PMS Pvt Ltd is the Property Management arm of the ACTION
               GROUP of Companies, founded in 2001 by Mr. Subhani Abdul — a
@@ -73,7 +73,7 @@ export function AboutSection() {
                   <div className="flex items-center justify-center w-6 h-6 rounded-full bg-[#f0f4eb]">
                     <CheckCircle2 className="h-4 w-4 text-[#336443]" />
                   </div>
-                  <span className="text-[#2d3a2a] text-sm font-medium">
+                  <span className="text-[#1f2a1d] text-sm font-medium">
                     {item}
                   </span>
                 </motion.div>

@@ -6,6 +6,21 @@ export const metadata: Metadata = {
   title: "Amaze PMS — Integrated Facility Management",
   description:
     "Amaze Property Management Solutions Pvt Ltd provides global standards of Integrated Facility Management across India with a 15,000+ strong workforce.",
+  openGraph: {
+    title: "Amaze PMS — Integrated Facility Management",
+    description:
+      "Amaze Property Management Solutions Pvt Ltd provides global standards of Integrated Facility Management across India with a 15,000+ strong workforce.",
+    url: "https://amazepms.com",
+    siteName: "Amaze PMS",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Amaze PMS — Integrated Facility Management",
+    description:
+      "Amaze Property Management Solutions Pvt Ltd provides global standards of Integrated Facility Management across India with a 15,000+ strong workforce.",
+  },
 };
 
 export default function RootLayout({

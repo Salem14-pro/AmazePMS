@@ -5,7 +5,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 export function SiteFooter() {
   return (
-    <footer id="contact" className="bg-[#1f2a1d] text-white/80 pt-16 pb-8">
+    <footer id="footer" className="bg-[#1f2a1d] text-white/80 pt-16 pb-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-14">
           <div className="space-y-5">
@@ -34,14 +34,19 @@ export function SiteFooter() {
           <div>
             <h4 className="font-semibold text-white mb-5 text-sm">Quick Links</h4>
             <ul className="space-y-2.5 text-sm">
-              {["Home", "About Us", "Services", "Careers", "Contact Us"].map(
+              {[
+                { label: "Home", href: "/" },
+                { label: "About Us", href: "/#about" },
+                { label: "Services", href: "/#services" },
+                { label: "Contact Us", href: "/#contact" }
+              ].map(
                 (link) => (
-                  <li key={link}>
+                  <li key={link.label}>
                     <Link
-                      href="#"
+                      href={link.href}
                       className="text-white/50 hover:text-white transition-colors"
                     >
-                      {link}
+                      {link.label}
                     </Link>
                   </li>
                 )
@@ -64,7 +69,7 @@ export function SiteFooter() {
               ].map((service) => (
                 <li key={service}>
                   <Link
-                    href="#"
+                    href="/#services"
                     className="text-white/50 hover:text-white transition-colors"
                   >
                     {service}
@@ -100,16 +105,10 @@ export function SiteFooter() {
           </p>
           <div className="flex gap-4">
             <Link
-              href="#"
+              href="/privacy-policy"
               className="hover:text-white/70 transition-colors"
             >
               Privacy Policy
-            </Link>
-            <Link
-              href="#"
-              className="hover:text-white/70 transition-colors"
-            >
-              Terms of Service
             </Link>
           </div>
         </div>

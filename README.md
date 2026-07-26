@@ -1,54 +1,36 @@
-# Next.js 14 SaaS Boilerplate
+# Amaze PMS
 
-A production-ready SaaS boilerplate built with the latest technologies. 
+A property management system landing page built with modern web technologies.
 
 ## Tech Stack
 - **Framework:** Next.js 14 (App Router)
-- **Styling:** Tailwind CSS + shadcn/ui
-- **Auth & Database:** Supabase
-- **Payments:** Stripe
-- **Email:** Resend
-- **Language:** TypeScript (Strict Mode)
+- **Styling:** Tailwind CSS
+- **Database:** Supabase (for contact form submissions)
+- **Language:** TypeScript
 
 ## Getting Started
 
-### 1. Clone & Install
+### 1. Install Dependencies
 ```bash
-git clone https://github.com/yourusername/your-repo.git
-cd your-repo
 npm install
 ```
 
 ### 2. Environment Variables
-Copy the `.env.example` file to `.env.local`:
+Copy the `.env.example` file to `.env.local` (or create one):
 ```bash
 cp .env.example .env.local
 ```
-Fill in the necessary values from your Supabase, Stripe, and Resend dashboards.
+Fill in the necessary values from your Supabase dashboard:
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- `SUPABASE_SERVICE_ROLE_KEY` (Required for the contact form to bypass RLS)
 
 ### 3. Database Setup (Supabase)
-Navigate to your Supabase project's SQL Editor and run the SQL queries located in `supabase/migrations/001_profiles.sql` and `supabase/migrations/002_subscriptions.sql`.
+Navigate to your Supabase project's SQL Editor and run the SQL query located in `supabase/migrations/003_contacts.sql` to create the contacts table.
 
-### 4. Supabase Webhook (for Resend)
-To send welcome emails automatically:
-1. Go to **Database** -> **Webhooks** in Supabase.
-2. Create a new webhook on `INSERT` for the `profiles` table.
-3. Point it to `https://your-domain.com/api/webhooks/supabase` (or use Ngrok for local development).
-4. Add an `Authorization` header with the value `Bearer <YOUR_SUPABASE_SERVICE_ROLE_KEY>`.
-
-### 5. Stripe Webhook
-Use the Stripe CLI to listen to local webhooks during development:
-```bash
-stripe listen --forward-to localhost:3000/api/webhooks/stripe
-```
-Add the generated Webhook Secret to your `.env.local`.
-
-### 6. Run the application
+### 4. Run the Application
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## License
-MIT
+This is for hosting it locally, You'll most certainly be given on the web hosted one

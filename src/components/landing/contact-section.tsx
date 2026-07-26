@@ -80,7 +80,7 @@ export function ContactSection() {
                 Ready to transform <br />
                 your facility?
               </h2>
-              <p className="text-[#4b5b47] text-lg mb-10 max-w-md">
+              <p className="text-[#1f2a1d] text-lg mb-10 max-w-md">
                 Get a customized quote for your property. Our team of experts is ready to build a comprehensive management plan.
               </p>
 
@@ -94,7 +94,7 @@ export function ContactSection() {
                     <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
                       <CheckCircle2 className="w-5 h-5 text-[#336443]" />
                     </div>
-                    <span className="text-[#2d3a2a] font-medium">{item}</span>
+                    <span className="text-[#1f2a1d] font-medium">{item}</span>
                   </div>
                 ))}
               </div>
@@ -169,7 +169,7 @@ export function ContactSection() {
                   <button
                     type="submit"
                     disabled={isSubmitting || isSuccess}
-                    className="w-full h-12 bg-[#1f2a1d] hover:bg-[#2d3a2a] text-white rounded-xl font-medium transition-colors flex items-center justify-center gap-2 group disabled:opacity-70"
+                    className="w-full h-12 bg-[#1f2a1d] hover:bg-[#1f2a1d] text-white rounded-xl font-medium transition-colors flex items-center justify-center gap-2 group disabled:opacity-70"
                   >
                     {isSubmitting ? (
                       <Loader2 className="w-5 h-5 animate-spin" />

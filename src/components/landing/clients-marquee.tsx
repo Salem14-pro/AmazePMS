@@ -22,7 +22,7 @@ export function ClientsMarquee() {
       className="py-24 bg-white border-y border-[#e4e9df]/50 relative overflow-hidden"
     >
       <div className="container mx-auto px-4 mb-12">
-        <h3 className="text-center text-sm font-semibold tracking-widest text-[#4b5b47] uppercase">
+        <h3 className="text-center text-sm font-semibold tracking-widest text-[#1f2a1d] uppercase">
           Trusted by leading organisations across India
         </h3>
       </div>
