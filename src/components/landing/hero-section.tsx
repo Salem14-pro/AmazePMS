@@ -37,7 +37,7 @@ export function HeroSection() {
           }}
         >
           Spaces that work,{" "}
-          <span className="text-[#a4cfa9] italic font-light">
+          <span className="text-[#a4cfa9] italic font-semibold">
             people who
             <br className="hidden sm:block" /> make it happen
           </span>
